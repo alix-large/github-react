@@ -1,8 +1,17 @@
 import './style.scss';
 
+import Card from '../Card';
+
 function Results() {
   return (
-    <p className='result'>Ici les résultats sous formes de cartes</p>
+    <div className="results">    
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </div>
   );
 }
 

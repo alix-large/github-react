@@ -1,16 +1,14 @@
 import './style.scss';
 
-import Card from '../Card';
 import Form from '../Form';
 import Results from '../Results';
 
 
 function App() {
     return (
-    <div>
+    <div className = "app">
         <Form />
         <Results />
-        <Card />
     </div>
     );
 }
