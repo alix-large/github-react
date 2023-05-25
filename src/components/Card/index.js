@@ -1,12 +1,12 @@
 import './style.scss';
 
-function Card() {
+function Card( {title, desc, url, avatar}) {
   return (
-    <a target="_blank" href="https://github.com/airbnb/javascript" className="card">
-      <img className="card__img" src="https://avatars.githubusercontent.com/u/698437?v=4" alt="avatar" />
+    <a target="_blank" href={url} className="card">
+      <img className="card__img" src={avatar} alt="avatar" />
       <div>
-         <h1 className="card__title">React</h1>
-         <p className="card__info">lrodfjpsmfjismdfkjsdf lskdfjlsdfkjsldf lsdfkjslfkjsfl </p>
+         <h1 className="card__title">{title}</h1>
+         <p className="card__info">{desc}</p>
       </div>
     </a>
   );
