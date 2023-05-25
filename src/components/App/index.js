@@ -1,11 +1,17 @@
 import './style.scss';
 
+import Card from '../Card';
+import Form from '../Form';
+import Results from '../Results';
+
+
 function App() {
     return (
-        <h1 className="title">
-            <span>Hello</span>
-            <span>world!</span>
-        </h1>
+    <div>
+        <Form />
+        <Results />
+        <Card />
+    </div>
     );
 }
 
