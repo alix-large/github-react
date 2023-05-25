@@ -1,0 +1,30 @@
+{
+  "name": "s08e10-github-react-alix-large",
+  "version": "1.0.0",
+  "description": "On avait fait un moteur de recherche de dépots github sans React. Et bien ajourd'hui on va le faire avec React",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-DWA-Session1/S08E10-github-react-alix-large.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-DWA-Session1/S08E10-github-react-alix-large/issues"
+  },
+  "homepage": "https://github.com/O-clock-DWA-Session1/S08E10-github-react-alix-large#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
