@@ -2,12 +2,20 @@ body {
     background-color: #f1f1f1;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-h1 {
-    text-align: center;
-    margin: 0;
-    padding: 0.5em 0;
-    font-size: 3em;
-    font-weight: 400;
-    color: #0366d6;
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+			clip-path: inset(50%) !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
 }
+h1{
+    font-size:3rem;
+}
+
+
