@@ -10,12 +10,11 @@ function App() {
 
     const [list, setList] = useState([]);
 
-    const fetchRepo = async(search) => {
-      console.log('on va faire un appel pour le terme', search);
+    const fetchRepos = async(search) => {
             try {
-                const response = await fetch("https://api.github.com/search/repositories?q=react");
+                const response = await fetch("https://api.github.com/search/repositories?q=react" + search);
                 const data = await response.json();
-                setList(data.items);
+                setList(data.items);//déclenche un nouveau state, la nouvelle valeur
             } catch (error) {
                 console.error(error);
                 alert('Erreur de récupération');
@@ -23,13 +22,13 @@ function App() {
         };
 
     useEffect (()=> {
-   
-    fetchRepo('react');
+     fetchRepos('react');
     }, []);    
 
     return (
     <main className = "app">
-        <Form />
+        <h1>Rechercher des dépots sur Github</h1>
+        <Form fetchRepos={fetchRepos}/>
         <Results 
             list={list}
         />
