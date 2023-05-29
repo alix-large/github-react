@@ -8,14 +8,14 @@ function Form({fetchRepos}) {
   };
 
   return (
-  <form id="search-form" className="form" onSubmit={handleSubmit}>
-   <label className="form__label">
+  <form className="form" onSubmit={handleSubmit}>
+   <label>
     <span>Mots clefs</span>
     <input 
       className="form__input" 
       type="search" 
       placeholder="React, JavaScript, Express,..."/>
-    <button className="form__action" type="submit">Rechercher</button>
+    <button type="submit">Rechercher</button>
    </label>
   </form>
   );

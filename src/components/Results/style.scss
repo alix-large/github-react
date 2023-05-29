@@ -1,5 +1,13 @@
 .results{
     display : grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px
+    // grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media screen and (min-width: 45rem) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media screen and (min-width: 70rem) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
