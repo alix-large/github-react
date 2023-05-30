@@ -5,7 +5,7 @@ import Form from '../Form';
 import Results from '../Results';
 import logo from './github-mark.png';
 
-
+import { sortRepositories } from '../../utils/sortRepositories.js';
 
 function App() {
 
@@ -41,7 +41,7 @@ function App() {
             <Form setSearch={setSearch} />
             <h2 className="app-title">Résultats de la recherche {search}</h2>
             {isLoading && <p>Veuillez patientez</p>}
-            {!isLoading &&  <Results list={list}/>}
+            {!isLoading &&  <Results list={sortRepositories(list)}/>}
         </div>
     </main>
     );

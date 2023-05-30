@@ -1,5 +1,5 @@
 import './style.scss';
-import getTitleByResultsNumber from '../../test/getTitleByResultsNumber.js';
+import getTitleByResultsNumber from '../../utils/getTitleByResultsNumber.js';
 
 import Card from '../Card';
 
@@ -15,6 +15,7 @@ function Results({list}) {
             desc={repo.description}
             avatar = {repo.owner.avatar_url}
             url = {repo.html_url}
+            open_issues ={repo.open_issues}
           />
         ))}   
     </section>

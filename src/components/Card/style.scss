@@ -5,6 +5,15 @@
   
     &__issues {
       font-weight: bold;
+      color:red;
+
+      &--green{
+        color : green;
+      }
+
+      &--orange {
+        color : orange;
+      }
     }
   
     &__title {
