@@ -1,23 +1,39 @@
 import './style.scss';
+import { useState} from 'react';
 
-function Form({fetchRepos}) {
+function Form({ setSearch }) {
+  
+  const [value, setValue] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetchRepos(event.target[0].value);//on appelle la fonction avec la valeur du champ
+    if(value.length > 2) {
+      setSearch(value);//on appelle la fonction avec la valeur du champ
+      setValue('');
+    }
+  };
+
+  const handleChange = (event)=> {
+    setValue(event.target.value);
   };
 
   return (
-  <form className="form" onSubmit={handleSubmit}>
-   <label>
-    <span>Mots clefs</span>
-    <input 
-      className="form__input" 
-      type="search" 
-      placeholder="React, JavaScript, Express,..."/>
-    <button type="submit">Rechercher</button>
-   </label>
-  </form>
+    <>
+      <form className="form" onSubmit={handleSubmit}>
+        <label>
+          <span>Mots clefs</span>
+          <input 
+            className="form__input" 
+            type="search" 
+            placeholder="React, JavaScript, Express,..."
+            onChange={handleChange}
+            value = {value} 
+            />   
+        </label>
+        <button type="submit">Lancer la recherche</button>
+      </form>   
+      {value.length <= 2 && <p>La recherche doit faire plus de 2 caractères</p>}
+    </>
   );
 }
 
