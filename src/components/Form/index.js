@@ -8,7 +8,7 @@ function Form({ setSearch }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if(value.length > 2) {
-      setSearch(value);//on appelle la fonction avec la valeur du champ
+      setSearch(value);
       setValue('');
     }
   };
@@ -32,7 +32,7 @@ function Form({ setSearch }) {
         </label>
         <button type="submit">Lancer la recherche</button>
       </form>   
-      {value.length <= 2 && <p>La recherche doit faire plus de 2 caractères</p>}
+      {value.length <= 2 && <p className="form__format">La recherche doit faire plus de 2 caractères</p>}
     </>
   );
 }

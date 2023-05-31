@@ -3,6 +3,13 @@
     align-items: flex-end;
     margin-bottom: 2rem;
 
+    &__format {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #333;
+      margin : 1rem 0;
+    }
+
     label {
         flex-grow:1;
     }

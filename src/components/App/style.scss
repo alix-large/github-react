@@ -1,10 +1,13 @@
-.logo {
+.app {
+
+  &__logo {
     width: .75em;
     margin-right: .5em;
   }
   
-  .app-title {
+  &__title {
     font-weight: bold;
     font-size: 1.5em;
     margin: 1rem 0;
   }
+}
